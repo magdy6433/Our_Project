@@ -34,15 +34,67 @@ class LevelController extends Controller
    *
    * @return Response
    */
-  public function store(StoreLevels $request)
+  // public function store(StoreLevels $request)
+  public function store(Request $request)
   {
     
-    $validated = $request->validated();
-    $Level = new Level();
-    $Level->Name = $request->Name;
-    $Level->Notes = $request->Notes;
-    $Level->save();
+    // $validated = $request->validated();
+    // $Level = new Level();
+    // $Level->Name = $request->Name;
+    // $Level->Images = $request->Images;
+    // // $Level->save();
+
+    // if ($Images = $request->file('Images')) {
+    //           Storage::disk('public')->delete($article->Images);
+    //           $name = $image->hashName();
+    
+    //           $validated['Images'] = $image->storeAs('Level', $name, 'public');
+    //       }
+    
+    //       Level::create($validated);
+    
+    //       return redirect()->route('Levels')->with('success', ' been Saved.');
+
+    $validatedData = $request->validate([
+      'Name'=> 'required',
+      'Images' => 'required|image',
+      // Other validation rules for form fields
+      
+  ]);
+  if ($image = $request->file('Images')) {
+    $name = $image->hashName();
+    $validatedData['Images'] = $image->storeAs('levels', $name, 'public');
+    // $imagePath = $image->storeAs('levels',$name,'public');
+    
   }
+  Level::create($validatedData);
+// $level = new Level();
+// $level->Name = $request->Name;
+// $level->Images = str_replace('public/', '', $imagePath);
+// $level->save();
+return redirect()->route('Levels.index');
+  }
+
+
+  // public function store(Request $request)
+  // {
+  //     $validated = $request->validated([
+  //         'id' => 'required',
+  //         'Name' => 'required|max:191|min:10',
+  //         'Images' => 'required|image|mimes:png,jpg',
+  //     ]);
+
+  //     if ($image = $request->file('image')) {
+
+  //         $name = $image->hashName();
+
+  //         $validated['image'] = $image->storeAs('articles', $name, 'public');
+  //     }
+
+  //     Article::create($validated);
+
+  //     return redirect()->route('Levels.Levels')->with('success', 'Article has been Saved.');
+  // }
 
   /**
    * Display the specified resource.
@@ -52,7 +104,7 @@ class LevelController extends Controller
    */
   public function show($id)
   {
-    
+    return view('pages.Levels.Levels',compact('Levels'));
   }
 
   /**

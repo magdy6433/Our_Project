@@ -38,7 +38,7 @@
                 <tr>
                     <th>#</th>
                     <th>اسم المستوى</th>
-                    <th>الملاحظات</th>
+                    <th>صورة المستوى</th>
                     <th>العمليات</th>
                 
                 </tr>
@@ -51,7 +51,14 @@
                 <tr> 
                     <td>{{$i}}</td>
                     <td>{{$Level->Name}}</td>
-                    <td>{{$Level->Notes}}</td>
+                    {{-- <td>{{$Level->Images}}</td> --}}
+                    {{-- <td><img src="{{ asset('storage/'. $Level->Images) }}" alt="photo">
+                    </td> --}}
+                       {{-- <td><img src="{{ asset('storage/'.$Level->Images) }}" alt="photo">
+                    </td> --}}
+                       <td><img src="{{ asset('storage/'.$Level->Images) }}" width="100px" alt="photo">
+                        
+                    </td>
                     <td>
                       <button type="button" class="btn btn-info btn-sm" data-toggle="model" data-target="#edit{{$Level->id}}"
                         title="تعديل"><i class="fa fa-edit"></i></button>
@@ -88,7 +95,7 @@
            </div>
            <div class="modal-body">
                <!-- add_form -->
-               <form action="{{ route('Levels.store') }}" method="POST">
+               <form action="{{ route('Levels.store') }}" method="POST" enctype="multipart/form-data">
                    @csrf
                    <div class="row">
                        <div class="col">
@@ -105,19 +112,20 @@
                        </div> --}}
                    </div>
                    <div class="form-group">
-                       <label
-                           for="exampleFormControlTextarea1">{{ trans('ملاحظات') }}
-                           :</label>
-                       <textarea class="form-control" name="Notes" id="exampleFormControlTextarea1"
-                                 rows="3"></textarea>
-                   </div>
+                    <label>صورة المستوى</label>
+                    <input type="file" name="Images" class="form-control" accept="image/*">
+
+                    @error('image')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
                    <br><br>
            </div>
            <div class="modal-footer">
                <button type="button" class="btn btn-secondary"
-                       data-dismiss="modal">{{ trans('اغلاق') }}</button>
+                       data-dismiss="modal">اغلاق</button>
                <button type="submit"
-                       class="btn btn-success">{{ trans('حفظ البيانات') }}</button>
+                       class="btn btn-success"> حفظ البيانات</button>
            </div>
            </form>
 

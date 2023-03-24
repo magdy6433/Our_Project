@@ -12,13 +12,13 @@
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
-                        <ul id="dashboard" class="collapse" data-parent="#sidebarnav">
+                        {{-- <ul id="dashboard" class="collapse" data-parent="#sidebarnav">
                             <li> <a href="index.html">Dashboard 01</a> </li>
                             <li> <a href="index-02.html">Dashboard 02</a> </li>
                             <li> <a href="index-03.html">Dashboard 03</a> </li>
                             <li> <a href="index-04.html">Dashboard 04</a> </li>
                             <li> <a href="index-05.html">Dashboard 05</a> </li>
-                        </ul>
+                        </ul> --}}
                     </li>
                     <!-- menu title -->
                     <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Components </li>
@@ -36,7 +36,7 @@
                         </ul>
                     </li>
                     <!-- menu item calendar-->
-                    <li>
+                    {{-- <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#calendar-menu">
                             <div class="pull-left"><i class="ti-calendar"></i><span
                                     class="right-nav-text">calendar</span></div>
@@ -47,39 +47,38 @@
                             <li> <a href="calendar.html">Events Calendar </a> </li>
                             <li> <a href="calendar-list.html">List Calendar</a> </li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <!-- menu item todo-->
-                    <li>
+                    {{-- <li>
                         <a href="todo-list.html"><i class="ti-menu-alt"></i><span class="right-nav-text">Todo
                                 list</span> </a>
-                    </li>
+                    </li> --}}
                     <!-- menu item chat-->
-                    <li>
+                    {{-- <li>
                         <a href="chat-page.html"><i class="ti-comments"></i><span class="right-nav-text">Chat
                             </span></a>
-                    </li>
+                    </li> --}}
                     <!-- menu item mailbox-->
-                    <li>
+                    {{-- <li>
                         <a href="mail-box.html"><i class="ti-email"></i><span class="right-nav-text">Mail
                                 box</span> <span class="badge badge-pill badge-warning float-right mt-1">HOT</span> </a>
-                    </li>
+                    </li> --}}
                     <!-- menu item Charts-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#chart">
                             <div class="pull-left"><i class="ti-pie-chart"></i><span
-                                    class="right-nav-text">Charts</span></div>
+                                    class="right-nav-text">الامتحان الاونلاين</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
                         <ul id="chart" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="chart-js.html">Chart.js</a> </li>
-                            <li> <a href="chart-morris.html">Chart morris </a> </li>
-                            <li> <a href="chart-sparkline.html">Chart Sparkline</a> </li>
+                            <li> <a href="{{route('online_exams.index')}}">الاتصال المباشر مع زووم</a> </li>
+                        
                         </ul>
                     </li>
 
                     <!-- menu font icon-->
-                    <li>
+                    {{-- <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#font-icon">
                             <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text">font
                                     icon</span></div>
@@ -91,16 +90,16 @@
                             <li> <a href="themify-icons.html">Themify icons</a> </li>
                             <li> <a href="weather-icon.html">Weather icons</a> </li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <!-- menu title -->
-                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Widgets, Forms & Tables </li>
+                    {{-- <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Widgets, Forms & Tables </li> --}}
                     <!-- menu item Widgets-->
-                    <li>
+                    {{-- <li>
                         <a href="widgets.html"><i class="ti-blackboard"></i><span class="right-nav-text">Widgets</span>
                             <span class="badge badge-pill badge-danger float-right mt-1">59</span> </a>
-                    </li>
+                    </li> --}}
                     <!-- menu item Form-->
-                    <li>
+                    {{-- <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Form">
                             <div class="pull-left"><i class="ti-files"></i><span class="right-nav-text">Form &
                                     Editor</span></div>
@@ -117,9 +116,9 @@
                             <li> <a href="input-group.html">input group</a> </li>
                             <li> <a href="toastr.html">toastr</a> </li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <!-- menu item table -->
-                    <li>
+                    {{-- <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#table">
                             <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">data
                                     table</span></div>
@@ -131,9 +130,9 @@
                             <li> <a href="data-local.html">Data local</a> </li>
                             <li> <a href="data-table.html">Data table</a> </li>
                         </ul>
-                    </li>
-                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">More Pages</li>
-                    <!-- menu item Custom pages-->
+                    </li> --}}
+                    {{-- <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">More Pages</li> --}}
+                    {{-- <!-- menu item Custom pages-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#custom-page">
                             <div class="pull-left"><i class="ti-file"></i><span class="right-nav-text">Custom
@@ -154,9 +153,9 @@
                             <li> <a href="error.html">Error</a> </li>
                             <li> <a href="faqs.html">faqs</a> </li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <!-- menu item Authentication-->
-                    <li>
+                    {{-- <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#authentication">
                             <div class="pull-left"><i class="ti-id-badge"></i><span
                                     class="right-nav-text">Authentication</span></div>
@@ -168,19 +167,19 @@
                             <li> <a href="register.html">register</a> </li>
                             <li> <a href="lockscreen.html">Lock screen</a> </li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <!-- menu item maps-->
-                    <li>
+                    {{-- <li>
                         <a href="maps.html"><i class="ti-location-pin"></i><span class="right-nav-text">maps</span>
                             <span class="badge badge-pill badge-success float-right mt-1">06</span></a>
-                    </li>
+                    </li> --}}
                     <!-- menu item timeline-->
-                    <li>
+                    {{-- <li>
                         <a href="timeline.html"><i class="ti-panel"></i><span class="right-nav-text">timeline</span>
                         </a>
-                    </li>
+                    </li> --}}
                     <!-- menu item Multi level-->
-                    <li>
+                    {{-- <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#multi-level">
                             <div class="pull-left"><i class="ti-layers"></i><span class="right-nav-text">Multi
                                     level Menu</span></div>
@@ -227,7 +226,7 @@
                                 </ul>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>

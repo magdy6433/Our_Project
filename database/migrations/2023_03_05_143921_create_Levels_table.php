@@ -11,7 +11,7 @@ class CreateLevelsTable extends Migration {
 			$table->increments('id');
 			$table->timestamps();
 			$table->string('Name');
-			$table->string('Notes');
+			$table->string('Images')->nullable();
 		});
 	}
 

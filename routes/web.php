@@ -24,6 +24,14 @@ Route::group(['middleware'=>['guest']],function(){
     });
 });
 
+Route::group(['namespace' => 'Students'], function () {
+    Route::resource('online_exams', 'OnlineExamController');
+   Route::get('/indirect', 'OnlineExamController@indirectCreate')->name('indirect.create');
+    Route::post('/indirect', 'OnlineExamController@storeIndirect')->name('indirect.store');
+
+});
+
+
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
@@ -42,7 +50,10 @@ Route::group(
     Route::resource('Levels', 'LevelController');
 });
 
-   
+// Route::get('/levels', [LevelsController::class, 'index'])->name('pages.Levels.Levels');
+
+
+
     
 });
 

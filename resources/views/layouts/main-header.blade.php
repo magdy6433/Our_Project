@@ -3,7 +3,7 @@
         <nav class="admin-header navbar navbar-default col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <!-- logo -->
             <div class="text-left navbar-brand-wrapper">
-                <a class="navbar-brand brand-logo" href="index.html"><img src="assets/images/logo-dark.png" alt=""></a>
+                <a class="navbar-brand brand-logo" href="index.html"><img src="assets/images/ABGD LOGO T 1.svg" alt="" ></a>
                 <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-icon-dark.png"
                         alt=""></a>
             </div>
@@ -27,7 +27,7 @@
             <!-- top bar right -->
             <ul class="nav navbar-nav ml-auto">
 
-                <div class="btn-group mb-1">
+                {{-- <div class="btn-group mb-1">
                     <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{trans('main_trans.change_language')}}</button>
                     <div class="dropdown-menu">
@@ -37,7 +37,7 @@
                                 </a>
                         @endforeach
                     </div>
-                </div>
+                </div> --}}
 
                 <li class="nav-item fullscreen">
                     <a id="btnFullscreen" href="#" class="nav-link"><i class="ti-fullscreen"></i></a>
@@ -101,7 +101,7 @@
                         <div class="dropdown-header">
                             <div class="media">
                                 <div class="media-body">
-                                    <h5 class="mt-0 mb-0">Michael Bean</h5>
+                                    <h5 class="mt-0 mb-0">ابجد</h5>
                                     <span>michael-bean@mail.com</span>
                                 </div>
                             </div>

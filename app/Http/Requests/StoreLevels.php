@@ -25,13 +25,14 @@ class StoreLevels extends FormRequest
     {
         return [
             'Name' => 'required',
+            'Images' => 'required',
         ];
     }
     public function messages()
     {
         return [
             'Name.required' => trans('هذا الحقل مطلوب'),
-
+            'Images.required' => trans('هذه الصورة مطلوب'),
         ];
     }
 }

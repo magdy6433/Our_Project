@@ -20985,7 +20985,7 @@ ul.list-unstyled li {
   height: auto;
   padding: 9px 0; }
   .admin-header .navbar-brand img {
-    height: 30px; }
+    width: 100%; }
 
 .admin-header .search .search-btn {
   color: #6c757d;
